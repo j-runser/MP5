@@ -34,6 +34,7 @@ public class LessonTwoPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btn_previousLesson = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         btn_previousLesson.setText("Previous Lesson");
         btn_previousLesson.addActionListener(new java.awt.event.ActionListener() {
@@ -41,6 +42,8 @@ public class LessonTwoPanel extends javax.swing.JPanel {
                 btn_previousLessonActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -50,11 +53,17 @@ public class LessonTwoPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(btn_previousLesson)
                 .addContainerGap(267, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(116, 116, 116))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(265, Short.MAX_VALUE)
+                .addGap(117, 117, 117)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
                 .addComponent(btn_previousLesson)
                 .addContainerGap())
         );
@@ -69,5 +78,6 @@ public class LessonTwoPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_previousLesson;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
