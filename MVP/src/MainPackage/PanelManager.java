@@ -19,10 +19,15 @@ public class PanelManager {
     
     public static final int INDEX_MAIN_PANEL = 0;
     public static final int INDEX_LESSON_ONE = 1;
-    public static final int INDEX_LESSON_TWO = 2;
+    public static final int INDEX_LESSON_ONE_Q = 2;
+    public static final int INDEX_LESSON_ONE_P = 3;
+    public static final int INDEX_LESSON_TWO = 4;
+    
     
     StartPanel startPanel;
     LessonOnePanel lessonOnePanel;
+    LessonOneQuestion lessonOneQuestion;
+    LessonOnePractice lessonOnePractice;
     LessonTwoPanel lessonTwoPanel;
     
     JLayeredPane pane;
@@ -36,9 +41,13 @@ public class PanelManager {
         startPanel = new StartPanel(this);
         lessonOnePanel = new LessonOnePanel(this);
         lessonTwoPanel = new LessonTwoPanel(this);
+        lessonOneQuestion = new LessonOneQuestion(this);
+        lessonOnePractice = new LessonOnePractice(this);
         
         panels.add(INDEX_MAIN_PANEL, startPanel);
         panels.add(INDEX_LESSON_ONE, lessonOnePanel);
+        panels.add(INDEX_LESSON_ONE_Q, lessonOneQuestion);
+        panels.add(INDEX_LESSON_ONE_P, lessonOnePractice);
         panels.add(INDEX_LESSON_TWO, lessonTwoPanel);
         
     }
