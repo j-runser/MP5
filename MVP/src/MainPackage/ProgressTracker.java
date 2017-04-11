@@ -16,6 +16,12 @@ public class ProgressTracker {
     private static final int OVERALL_LENGTH    = 2;
     private static final int LESSON_ONE_LENGTH = 3;
     
+    public static final int INDEX_OVERALL_LESSON_ONE = 0;
+    public static final int INDEX_OVERALL_LESSON_TWO = 1;
+    
+    public static final int INDEX_LESSON_ONE_READING  = 0;
+    public static final int INDEX_LESSON_ONE_QUESTION = 1;
+    public static final int INDEX_LESSON_ONE_PRACTICE = 2;
     
     private boolean[] overallProgress;
     private boolean[] lessonOneProgress;

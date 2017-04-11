@@ -17,20 +17,22 @@ public class PanelManager {
     
     ArrayList<JPanel> panels;
     
-    public static final int INDEX_MAIN_PANEL = 0;
-    public static final int INDEX_LESSON_ONE = 1;
+    public static final int INDEX_MAIN_PANEL   = 0;
+    public static final int INDEX_LESSON_ONE   = 1;
     public static final int INDEX_LESSON_ONE_Q = 2;
     public static final int INDEX_LESSON_ONE_P = 3;
-    public static final int INDEX_LESSON_TWO = 4;
+    public static final int INDEX_LESSON_TWO   = 4;
     
     
-    StartPanel startPanel;
-    LessonOnePanel lessonOnePanel;
-    LessonOneQuestion lessonOneQuestion;
-    LessonOnePractice lessonOnePractice;
-    LessonTwoPanel lessonTwoPanel;
+    private final StartPanel startPanel;
     
-    JLayeredPane pane;
+    private final LessonOnePanel lessonOnePanel;
+    private final LessonOneQuestion lessonOneQuestion;
+    private final LessonOnePractice lessonOnePractice;
+    
+    private final LessonTwoPanel lessonTwoPanel;
+    
+    private final JLayeredPane pane;
     
     public PanelManager(JLayeredPane pane) {
         

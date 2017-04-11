@@ -20,7 +20,7 @@ public class LessonOneQuestion extends javax.swing.JPanel {
         
         this.manager = manager;
         
-        nextButton.setVisible(false);
+        nextButton.setEnabled(false);
         questionTextArea.setWrapStyleWord(true);
    
     }
@@ -139,7 +139,7 @@ public class LessonOneQuestion extends javax.swing.JPanel {
 
     private void optionBButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optionBButtonActionPerformed
         
-        nextButton.setVisible(true);
+        nextButton.setEnabled(true);
         feedbackLabel.setText("Correct!");
         
     }//GEN-LAST:event_optionBButtonActionPerformed

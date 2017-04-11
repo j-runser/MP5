@@ -23,6 +23,8 @@ public class LessonOnePractice extends javax.swing.JPanel {
     ImageIcon diodeImage = new ImageIcon(this.getClass().getResource("/images/diode.png"));
     ImageIcon wireImage = new ImageIcon(this.getClass().getResource("/images/wire.png"));
     
+    PanelManager manager;
+    
     /**
      * Creates new form LessonOnePractice
      */
@@ -33,6 +35,10 @@ public class LessonOnePractice extends javax.swing.JPanel {
         topButton.setIcon(wireImage);
         rightButton.setIcon(wireImage);
         bottomButton.setIcon(wireImage);
+        
+        this.manager = manager;
+        
+        btn_completeLesson.setEnabled(false);
             
     }
     /**
@@ -61,8 +67,8 @@ public class LessonOnePractice extends javax.swing.JPanel {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btn_completeLesson = new javax.swing.JButton();
+        btn_back = new javax.swing.JButton();
 
         topButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,9 +129,14 @@ public class LessonOnePractice extends javax.swing.JPanel {
 
         jTextField4.setText("            ");
 
-        jButton2.setText("Complete Lesson");
+        btn_completeLesson.setText("Complete Lesson");
+        btn_completeLesson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_completeLessonActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Back");
+        btn_back.setText("Back");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -169,9 +180,9 @@ public class LessonOnePractice extends javax.swing.JPanel {
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(btn_back)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
+                        .addComponent(btn_completeLesson)))
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
@@ -220,8 +231,8 @@ public class LessonOnePractice extends javax.swing.JPanel {
                         .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3))
+                            .addComponent(btn_completeLesson)
+                            .addComponent(btn_back))
                         .addGap(18, 18, 18))))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -342,21 +353,29 @@ public class LessonOnePractice extends javax.swing.JPanel {
     }//GEN-LAST:event_bottomButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
+        btn_completeLesson.setEnabled(true);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void btn_completeLessonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_completeLessonActionPerformed
+        
+        manager.setPanel(PanelManager.INDEX_MAIN_PANEL);
+        
+    }//GEN-LAST:event_btn_completeLessonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bottomButton;
+    private javax.swing.JButton btn_back;
+    private javax.swing.JButton btn_completeLesson;
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
